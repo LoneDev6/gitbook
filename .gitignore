@@ -27,3 +27,5 @@ yarn-error.log*
 *.tsbuildinfo
 
 !/node_modules/fawesome
+/.vscode
+/packages/gitbook/dist

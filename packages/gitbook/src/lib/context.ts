@@ -284,6 +284,49 @@ export async function fetchSiteContextByIds(
     })();
 
     const customization = (() => {
+
+        // TODO get site customization from matteodev.it/spigot/wiki/overridecustomizations/WEBSITE.json
+        // matteodev.it/spigot/wiki/overridecustomizations/wiki.itemsadder.com.json
+        // and override the properties for EACH of the entries inside "site".
+        // For example 
+        // "header": {
+        //     "preset": "default",
+        //     "links": [
+        //         {
+        //             "to": {
+        //                 "url": "https://addons.devs.beer/itemsadder/",
+        //                 "kind": "url"
+        //             },
+        //             "links": [],
+        //             "title": "Addons (old)"
+        //         },
+        //         {
+        //             "to": {
+        //                 "url": "https://addon.devs.beer/",
+        //                 "kind": "url"
+        //             },
+        //             "links": [],
+        //             "title": "Addons (new)"
+        //         },
+        //         {
+        //             "to": {
+        //                 "url": "https://spigot.devs.beer/",
+        //                 "kind": "url"
+        //             },
+        //             "links": [],
+        //             "title": "🔌 More Plugins"
+        //         },
+        //         {
+        //             "to": {
+        //                 "url": "https://donate.devs.beer/",
+        //                 "kind": "url"
+        //             },
+        //             "links": [],
+        //             "title": "❤️ Donate"
+        //         }
+        //     ]
+        // },
+
         if (ids.siteSpace) {
             const siteSpaceSettings = customizations.siteSpaces[ids.siteSpace];
             if (siteSpaceSettings) {
@@ -295,6 +338,7 @@ export async function fetchSiteContextByIds(
             // It's better to fallback on customization of the site that displaying an error.
             console.warn('Customization not found for site space', ids.siteSpace);
         }
+
 
         return customizations.site;
     })();

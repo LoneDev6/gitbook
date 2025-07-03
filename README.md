@@ -174,3 +174,16 @@ GitBook wouldn't be possible without these projects:
 ## Legacy GitBook (Deprecated)
 
 Our previous version of GitBook and it's CLI tool are now deprecated. You can still view the old repository and it's commits on this [branch](https://github.com/GitbookIO/gitbook/tree/legacy).
+
+# Customizations Done
+
+## Changed icons provider
+
+packages/icons/src/IconsProvider.tsx getIconAssetURL(..)
+
+## Site customization info
+
+It's done in packages/gitbook/src/libs/context.ts fetchSiteContextByIds(...)
+
+
+// TODO add advertistement banners
