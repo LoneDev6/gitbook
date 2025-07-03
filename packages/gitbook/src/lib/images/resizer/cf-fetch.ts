@@ -26,7 +26,7 @@ export async function resizeImageWithCFFetch(
                         : `image/${resizeOptions.format || 'jpeg'}`,
             },
             signal,
-            cf: { image: resizeOptions },
+            cf: { image: resizeOptions } as any,
         })
     );
 }
