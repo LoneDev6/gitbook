@@ -3,6 +3,7 @@ on:
     push:
         branches:
             - main
+    workflow_dispatch:
 env:
     NPM_TOKEN_READONLY: ${{ secrets.NPM_TOKEN_READONLY }}
 jobs:
