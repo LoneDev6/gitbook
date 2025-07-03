@@ -2,6 +2,7 @@
     "name": "gitbook",
     "version": "0.12.0",
     "private": true,
+    "main": ".open-next/worker.js",
     "dependencies": {
         "@gitbook/api": "catalog:",
         "@gitbook/cache-tags": "workspace:*",
@@ -98,16 +99,12 @@
         "vercel": "^39.3.0"
     },
     "scripts": {
-        "generate": "gitbook-icons ./public/~gitbook/static/icons custom-icons && gitbook-math ./public/~gitbook/static/math && wrangler types",
+        "generate": "gitbook-icons ./public/~gitbook/static/icons custom-icons && gitbook-math ./public/~gitbook/static/math",
         "copy:icons": "gitbook-icons ./public/~gitbook/static/icons",
         "clean": "rm -rf ./.next && rm -rf ./public/~gitbook/static/icons && rm -rf ./public/~gitbook/static/math",
         "dev": "env-cmd --silent -f ../../.env.local next --turbopack",
         "build": "next build",
         "start": "next start",
-        "build:cloudflare": "opennextjs-cloudflare build",
-        "dev:cloudflare": "wrangler dev --port 8771 --env preview",
-        "dev:cf:middleware": "wrangler dev --port 8771 --inspector-port 9230 --env dev --config ./openNext/customWorkers/middlewareWrangler.jsonc",
-        "dev:cf:server": "wrangler dev --port 8772 --env dev --config ./openNext/customWorkers/defaultWrangler.jsonc",
         "e2e": "playwright test e2e/internal.spec.ts e2e/pdf.spec.ts",
         "e2e-customers": "playwright test e2e/customers.spec.ts",
         "unit": "bun test {src,packages} --preload ./tests/preload-bun.ts",
