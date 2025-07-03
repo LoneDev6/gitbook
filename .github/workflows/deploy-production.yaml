@@ -7,11 +7,11 @@ on:
 env:
     NPM_TOKEN_READONLY: ${{ secrets.NPM_TOKEN_READONLY }}
 jobs:
-    deploy-v2-cloudflare:
-        name: Deploy v2 to Cloudflare Worker (production)
+    deploy-v2-vercel:
+        name: Deploy v2 to Vercel (production)
         runs-on: ubuntu-latest
         environment: 
-            name: 2c-production
+            name: 2v-production
             url: ${{ steps.deploy.outputs.deployment-url }}
         outputs:
             deployment-url: ${{ steps.deploy.outputs.deployment-url }}
@@ -20,14 +20,9 @@ jobs:
               uses: actions/checkout@v4
             - name: Deploy
               id: deploy
-              uses: ./.github/composite/deploy-cloudflare
+              uses: ./.github/composite/deploy-vercel
               with:
-                  environment: production
-                  deploy: true
-                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  commitTag: main
-                  commitMessage: ${{ github.sha }}
-            - name: Outputs
-              run: |
-                  echo "URL: ${{ steps.deploy.outputs.deployment-url }}"
+                environment: production
+                vercelOrg: ${{ secrets.VERCEL_ORG_ID }}
+                vercelProject: ${{ secrets.VERCEL_PROJECT_ID }}
+                vercelToken: ${{ secrets.VERCEL_TOKEN }}
