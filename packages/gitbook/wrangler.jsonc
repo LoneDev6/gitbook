@@ -69,11 +69,6 @@
                     "service": "gitbook-x-staging-api-cache"
                 }
             ],
-            "tail_consumers": [
-                {
-                    "service": "gitbook-x-staging-tail"
-                }
-            ],
             "durable_objects": {
                 "bindings": [
                     {
@@ -127,12 +122,7 @@
                     "binding": "GITBOOK_API",
                     "service": "gitbook-x-prod-api-cache"
                 }
-            ],
-            "tail_consumers": [
-                {
-                    "service": "gitbook-x-prod-tail"
-                }
-            ],
+            ]
             "durable_objects": {
                 "bindings": [
                     {

@@ -113,11 +113,6 @@
                     "service": "gitbook-open-v2-server-staging"
                 }
             ],
-            "tail_consumers": [
-                {
-                    "service": "gitbook-x-staging-tail"
-                }
-            ],
             "durable_objects": {
                 "bindings": [
                     {
@@ -179,11 +174,6 @@
                 {
                     "binding": "DEFAULT_WORKER",
                     "service": "gitbook-open-v2-server-production"
-                }
-            ],
-            "tail_consumers": [
-                {
-                    "service": "gitbook-x-prod-tail"
                 }
             ],
             "durable_objects": {
