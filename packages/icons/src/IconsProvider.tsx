@@ -70,6 +70,11 @@ export function getAssetURL(location: Partial<IconsAssetsLocation>, path: string
  * Get the URL for the SVG of an icon.
  */
 export function getIconAssetURL(context: IconsContextType, style: string, icon: string): string {
-    const location = context.assetsByStyles?.[style] ?? context;
-    return getAssetURL(location, `svgs/${style}/${icon}.svg`);
+    // const location = context.assetsByStyles?.[style] ?? context;
+    // return getAssetURL(location, `svgs/${style}/${icon}.svg`);
+    if(icon === "gitbook") {
+        return `https://static-2v.gitbook.com/~gitbook/static/icons/svgs/custom-icons/gitbook.svg?v=2`;
+    }
+
+    return `https://ka-p.fontawesome.com/releases/v6.6.0/svgs/${style}/${icon}.svg?v=2&token=a463935e93`;
 }
