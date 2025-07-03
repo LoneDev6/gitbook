@@ -11,9 +11,8 @@ export function getKitPath() {
     try {
         source = path.resolve(
             path.dirname(
-                url.fileURLToPath(import.meta.resolve('@gitbook/fontawesome-pro/package.json'))
-            ),
-            'icons'
+                url.fileURLToPath(import.meta.resolve('@fawesome/fontawesome-pro/package.json'))
+            )
         );
     } catch (_error) {}
 

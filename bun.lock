@@ -159,7 +159,7 @@
         "typescript": "^5.5.3",
       },
       "optionalDependencies": {
-        "@gitbook/fontawesome-pro": "1.0.8",
+        "@fawesome/fontawesome-pro": "1.0.8",
       },
       "peerDependencies": {
         "react": "*",
@@ -617,8 +617,6 @@
     "@gitbook/colors": ["@gitbook/colors@workspace:packages/colors"],
 
     "@gitbook/emoji-codepoints": ["@gitbook/emoji-codepoints@workspace:packages/emoji-codepoints"],
-
-    "@gitbook/fontawesome-pro": ["@gitbook/fontawesome-pro@1.0.8", "", { "dependencies": { "@fortawesome/fontawesome-common-types": "^6.6.0" } }, "sha512-i4PgiuGyUb52Muhc52kK3aMJIMfMkA2RbPW30tre8a6M8T6mWTfYo6gafSgjNvF1vH29zcuB8oBYnF0gO4XcHA=="],
 
     "@gitbook/fonts": ["@gitbook/fonts@workspace:packages/fonts"],
 
