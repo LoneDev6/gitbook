@@ -26,6 +26,8 @@ jobs:
               run: bun install --frozen-lockfile
               env:
                   PUPPETEER_SKIP_DOWNLOAD: 1
+            - name: Configure git credentials
+              run: git config --global url."https://${{ secrets.GH_PERSONAL_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
             - name: Create Release Pull Request or Publish to npm
               id: changesets
               uses: changesets/action@v1
