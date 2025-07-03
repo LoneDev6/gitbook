@@ -114,12 +114,7 @@
                         "script_name": "gitbook-open-v2-do-staging"
                     }
                 ]
-            },
-            "tail_consumers": [
-                {
-                    "service": "gitbook-x-staging-tail"
-                }
-            ]
+            }
         },
         "production": {
             "vars": {
@@ -157,12 +152,7 @@
                         "script_name": "gitbook-open-v2-do-production"
                     }
                 ]
-            },
-            "tail_consumers": [
-                {
-                    "service": "gitbook-x-prod-tail"
-                }
-            ]
+            }
         }
     }
 }

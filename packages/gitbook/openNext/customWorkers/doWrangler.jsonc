@@ -62,11 +62,6 @@
                     "bucket_name": "gitbook-open-v2-cache-staging"
                 }
             ],
-            "tail_consumers": [
-                {
-                    "service": "gitbook-x-staging-tail"
-                }
-            ],
             "services": [
                 {
                     "binding": "WORKER_SELF_REFERENCE",
@@ -109,11 +104,6 @@
                 {
                     "binding": "NEXT_INC_CACHE_R2_BUCKET",
                     "bucket_name": "gitbook-open-v2-cache-production"
-                }
-            ],
-            "tail_consumers": [
-                {
-                    "service": "gitbook-x-prod-tail"
                 }
             ],
             "services": [
