@@ -122,7 +122,7 @@
                     "binding": "GITBOOK_API",
                     "service": "gitbook-x-prod-api-cache"
                 }
-            ]
+            ],
             "durable_objects": {
                 "bindings": [
                     {
