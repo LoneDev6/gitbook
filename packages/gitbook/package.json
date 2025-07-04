@@ -2,7 +2,6 @@
     "name": "gitbook",
     "version": "0.12.0",
     "private": true,
-    "main": ".open-next/worker.js",
     "dependencies": {
         "@gitbook/api": "catalog:",
         "@gitbook/cache-tags": "workspace:*",

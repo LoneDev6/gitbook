@@ -341,7 +341,6 @@ export async function fetchSiteContextByIds(
             console.warn('Customization not found for site space', ids.siteSpace);
         }
 
-
         return customizations.site;
     })();
 
