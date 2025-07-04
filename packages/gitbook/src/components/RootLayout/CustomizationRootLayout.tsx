@@ -109,6 +109,13 @@ export async function CustomizationRootLayout(props: {
             )}
         >
             <head>
+                {/* AdSense script */}
+                <script
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1599021797146517"
+                    crossOrigin="anonymous"
+                ></script>
+                
                 {customization.privacyPolicy.url ? (
                     <link rel="privacy-policy" href={customization.privacyPolicy.url} />
                 ) : null}
