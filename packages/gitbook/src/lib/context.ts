@@ -327,6 +327,8 @@ export async function fetchSiteContextByIds(
         //     ]
         // },
 
+        // console.log(JSON.stringify(customizations, null, 2));
+
         if (ids.siteSpace) {
             const siteSpaceSettings = customizations.siteSpaces[ids.siteSpace];
             if (siteSpaceSettings) {
