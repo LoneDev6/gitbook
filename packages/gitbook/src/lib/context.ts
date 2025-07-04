@@ -19,6 +19,9 @@ import type {
     SiteStructure,
     Space,
 } from '@gitbook/api';
+import {
+    CustomizationHeaderPreset
+} from '@gitbook/api';
 import assertNever from 'assert-never';
 import { notFound } from 'next/navigation';
 import { assert } from 'ts-essentials';
@@ -284,53 +287,37 @@ export async function fetchSiteContextByIds(
     })();
 
     const customization = (() => {
-
-        // TODO get site customization from matteodev.it/spigot/wiki/overridecustomizations/WEBSITE.json
-        // matteodev.it/spigot/wiki/overridecustomizations/wiki.itemsadder.com.json
-        // and override the properties for EACH of the entries inside "site".
-        // For example 
-        // "header": {
-        //     "preset": "default",
-        //     "links": [
-        //         {
-        //             "to": {
-        //                 "url": "https://addons.devs.beer/itemsadder/",
-        //                 "kind": "url"
-        //             },
-        //             "links": [],
-        //             "title": "Addons (old)"
-        //         },
-        //         {
-        //             "to": {
-        //                 "url": "https://addon.devs.beer/",
-        //                 "kind": "url"
-        //             },
-        //             "links": [],
-        //             "title": "Addons (new)"
-        //         },
-        //         {
-        //             "to": {
-        //                 "url": "https://spigot.devs.beer/",
-        //                 "kind": "url"
-        //             },
-        //             "links": [],
-        //             "title": "🔌 More Plugins"
-        //         },
-        //         {
-        //             "to": {
-        //                 "url": "https://donate.devs.beer/",
-        //                 "kind": "url"
-        //             },
-        //             "links": [],
-        //             "title": "❤️ Donate"
-        //         }
-        //     ]
-        // },
-
-        // console.log(JSON.stringify(customizations, null, 2));
+        // Iterate all the customizations and change the links to the new ones.
+        const customLinks = [
+            {
+                to: { url: 'https://addon.devs.beer/', kind: 'url' as const },
+                links: [],
+                title: 'Addons',
+            },
+            {
+                to: { url: 'https://spigot.devs.beer/', kind: 'url' as const },
+                links: [],
+                title: '🔌 More Plugins',
+            },
+            {
+                to: { url: 'https://donate.devs.beer/', kind: 'url' as const },
+                links: [],
+                title: '❤️ Donate',
+            },
+        ]
 
         if (ids.siteSpace) {
             const siteSpaceSettings = customizations.siteSpaces[ids.siteSpace];
+
+            if (siteSpaceSettings?.header?.links) {
+                siteSpaceSettings.header.links = customLinks;
+            } else {
+                siteSpaceSettings.header = {
+                    preset: CustomizationHeaderPreset.Default,
+                    links: customLinks,
+                };
+            }
+            
             if (siteSpaceSettings) {
                 return siteSpaceSettings;
             }
