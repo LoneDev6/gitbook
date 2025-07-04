@@ -186,4 +186,5 @@ packages/icons/src/IconsProvider.tsx getIconAssetURL(..)
 It's done in packages/gitbook/src/libs/context.ts fetchSiteContextByIds(...)
 
 
-// TODO add advertistement banners
+TODO fix the fact that some links lead to the original gitbook space.
+A clear example is the top left website name link.
