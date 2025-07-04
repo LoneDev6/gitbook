@@ -610,13 +610,15 @@
 
     "@fortawesome/fontawesome-svg-core": ["@fortawesome/fontawesome-svg-core@6.6.0", "", { "dependencies": { "@fortawesome/fontawesome-common-types": "6.6.0" } }, "sha512-KHwPkCk6oRT4HADE7smhfsKudt9N/9lm6EJ5BVg0tD1yPA5hht837fB87F8pn15D8JfTqQOjhKTktwmLMiD7Kg=="],
 
-    "@gitbook/api": ["@gitbook/api@0.126.0", "", { "dependencies": { "event-iterator": "^2.0.0", "eventsource-parser": "^3.0.0" } }, "sha512-htDAGus+N+uSZZNHYP/My90EjaPMXaYXvwbnwOOFZqRUD5T6xsrMmUpMuNBF5KhdX/BBdwNKXUwt9Yeq7n80Bw=="],
+    "@gitbook/api": ["@gitbook/api@0.128.0", "", { "dependencies": { "event-iterator": "^2.0.0", "eventsource-parser": "^3.0.0" } }, "sha512-VO98hRGfUcFdwMplvFW49jz72/ew2waE7RCu+URKAY2AyPHAduv2zgluF5gF1VcDyuJM9PKFtsdsMtpUjI5sYg=="],
 
     "@gitbook/cache-tags": ["@gitbook/cache-tags@workspace:packages/cache-tags"],
 
     "@gitbook/colors": ["@gitbook/colors@workspace:packages/colors"],
 
     "@gitbook/emoji-codepoints": ["@gitbook/emoji-codepoints@workspace:packages/emoji-codepoints"],
+
+    "@gitbook/fontawesome-pro": ["@gitbook/fontawesome-pro@1.0.8", "", { "dependencies": { "@fortawesome/fontawesome-common-types": "^6.6.0" } }, "sha512-i4PgiuGyUb52Muhc52kK3aMJIMfMkA2RbPW30tre8a6M8T6mWTfYo6gafSgjNvF1vH29zcuB8oBYnF0gO4XcHA=="],
 
     "@gitbook/fonts": ["@gitbook/fonts@workspace:packages/fonts"],
 
