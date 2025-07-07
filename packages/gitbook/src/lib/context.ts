@@ -317,6 +317,10 @@ export async function fetchSiteContextByIds(
                     links: customLinks,
                 };
             }
+
+            if(siteSpaceSettings?.trademark?.enabled) {
+                siteSpaceSettings.trademark.enabled = false;
+            }
             
             if (siteSpaceSettings) {
                 return siteSpaceSettings;

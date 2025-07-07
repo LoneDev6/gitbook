@@ -230,6 +230,29 @@ export function PageAside(props: {
                                     </a>
                                 </div>
                             ) : null}
+                            <div>
+                                <a
+                                    href="https://www.gitbook.com"
+                                    className={tcls(
+                                        'flex',
+                                        'flex-row',
+                                        'items-center',
+                                        'text-sm',
+                                        'hover:text-tint-strong',
+                                        'links-accent:hover:underline',
+                                        'links-accent:hover:underline-offset-4',
+                                        'links-accent:hover:decoration-[3px]',
+                                        'links-accent:hover:decoration-primary-subtle',
+                                        'py-2'
+                                    )}
+                                >
+                                    <Icon
+                                        icon="gitbook"
+                                        className={tcls('size-4', 'mr-1.5')}
+                                    />
+                                    {t(language, 'powered_by_gitbook')}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </>
